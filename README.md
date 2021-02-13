@@ -27,7 +27,7 @@
 ### Iris Example Project Dependencies
 - FastAPI
 - pydantic
-- uvnicorn
+- uvnicorn[standard]
 - joblib
 - pandas
 - scikit-learn
