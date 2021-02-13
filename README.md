@@ -16,6 +16,7 @@
     - `.ebignore`
     - `builder.py` ML model builder script (external)
     - `loader.py` ML model loader script (external)
+    - `Procfile` Web app entrypoint
     - `README.md` This file
     - `requirements.txt` Dependencies
 
