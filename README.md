@@ -47,19 +47,19 @@ python3.7 -m venv venv
 ### Install Local Dependencies
 `pip install -r requirements.txt`
 
-### EB - Initialize
+### Elastic Beanstalk - Initialize
 `eb init`
 
-### EB - Deploy
+### Elastic Beanstalk - Deploy
 `eb create --region us-east-1 ds-fastapi-test`
 
-### EB - Redeploy
+### Elastic Beanstalk - Redeploy
 `eb deploy ds-fastapi-test`
 
-### EB - Open App
+### Elastic Beanstalk - Open App
 `eb open ds-fastapi-test`
 
-### EB Environment Variables
+### Elastic Beanstalk Environment Variables
 In the Elastic Beanstalk Console go to your environment -> Configuration. Then
 Software -> Edit. At the bottom of the page you can add a [key: value] pair for 
 each of the environment variables required for the app.
