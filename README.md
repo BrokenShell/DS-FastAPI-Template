@@ -1,8 +1,8 @@
 # DS FastAPI Template
+## Iris Example Project
 
-
-### Deployment URLs
-- Todo
+### Deployment URL
+- https://fastapi-test.storysquad.dev
 
 ### Project Structure
 - Project Directory
@@ -19,11 +19,9 @@
     - `README.md` - This file
     - `requirements.txt` - Dependencies
 
-
 ### The deployment should include only the following
 - Python package: `/application`
 - Project dependencies: `requirements.txt`
-
 
 ### Iris Example Project Dependencies
 - FastAPI
@@ -32,7 +30,6 @@
 - joblib
 - pandas
 - scikit-learn
-
 
 ### EB Environment Variables
 In the Elastic Beanstalk Console go to your environment -> Configuration. Then
