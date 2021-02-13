@@ -38,3 +38,12 @@
 In the Elastic Beanstalk Console go to your environment -> Configuration. Then
 Software -> Edit. At the bottom of the page you can add a [key: value] pair for 
 each of the environment variables required for the app.
+
+### EB Initialize
+`eb init`
+
+### EB Deploy
+`eb create --region us-east-1 ds-fastapi-test`
+
+### EB Redeploy
+`eb deploy ds-fastapi-test`
