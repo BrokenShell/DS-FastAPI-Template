@@ -22,17 +22,30 @@
 
 ### Project Dependencies
 - Python 3.7
-- FastAPI
-- pydantic
-- uvicorn[standard]
-- joblib
-- pandas
-- scikit-learn
+    - fastapi
+    - pydantic
+    - uvicorn[standard]
+    - joblib
+    - pandas
+    - scikit-learn
+- awscli
+- eb
 
-### EB Environment Variables
-In the Elastic Beanstalk Console go to your environment -> Configuration. Then
-Software -> Edit. At the bottom of the page you can add a [key: value] pair for 
-each of the environment variables required for the app.
+## Setup Instructions - Unix/Linux
+In the following steps replace `ds-fastapi-test` with your project's name.
+
+### Local Virtual Environment Setup
+```
+mkdir ds-fastapi-test
+cd ds-fastapi-test
+python3.7 -m venv venv
+```
+
+### Local Virtual Environment Activation
+`source venv/bin/activate`
+
+### Install Local Dependencies
+`pip install -r requirements.txt`
 
 ### EB - Initialize
 `eb init`
@@ -45,3 +58,8 @@ each of the environment variables required for the app.
 
 ### EB - Open App
 `eb open ds-fastapi-test`
+
+### EB Environment Variables
+In the Elastic Beanstalk Console go to your environment -> Configuration. Then
+Software -> Edit. At the bottom of the page you can add a [key: value] pair for 
+each of the environment variables required for the app.
