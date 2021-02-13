@@ -35,29 +35,48 @@
 In the following steps replace `ds-fastapi-test` with your project's name.
 
 ### Local Virtual Environment Setup
-```
+```shell
 mkdir ds-fastapi-test
 cd ds-fastapi-test
 python3.7 -m venv venv
 ```
 
 ### Local Virtual Environment Activation
-`source venv/bin/activate`
+```shell
+source venv/bin/activate
+```
 
 ### Install Local Dependencies
-`pip install -r requirements.txt`
+```shell
+pip install -r requirements.txt
+```
+
+### Run App Locally
+```shell
+uvicorn application:application
+```
 
 ### Elastic Beanstalk - Initialize
-`eb init`
+```shell
+eb init
+```
+This is an interactive prompt. It will ask you a series of questions about your project.
+For more details - refer to this walk through: https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-configuration.html
 
 ### Elastic Beanstalk - Deploy
-`eb create --region us-east-1 ds-fastapi-test`
+```shell
+eb create --region us-east-1 ds-fastapi-test
+```
 
 ### Elastic Beanstalk - Redeploy
-`eb deploy ds-fastapi-test`
+```shell
+eb deploy ds-fastapi-test
+```
 
 ### Elastic Beanstalk - Open App
-`eb open ds-fastapi-test`
+```shell
+eb open ds-fastapi-test
+```
 
 ### Elastic Beanstalk Environment Variables
 In the Elastic Beanstalk Console go to your environment -> Configuration. Then
