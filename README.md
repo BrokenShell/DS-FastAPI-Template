@@ -5,8 +5,8 @@
 - https://fastapi-test.storysquad.dev
 
 ### Project Structure
-- Project Directory
-    - `/application` Python package directory
+- `/ds-fastapi-test/` Project Directory
+    - `/application/` Python package directory
         - `__init__.py`
         - `data.py` Iris object model for pydantic
         - `main.py` Primary application routes and FastAPI app named `application`
@@ -31,7 +31,7 @@
 - awscli
 - eb
 
-## Setup Instructions - Unix/Linux
+## Setup Instructions - Unix/Linux or Windows with WSL
 In the following steps replace `ds-fastapi-test` with your project's name.
 
 ### Local Virtual Environment Setup
