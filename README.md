@@ -19,11 +19,8 @@
     - `README.md` - This file
     - `requirements.txt` - Dependencies
 
-### The deployment should include only the following
-- Python package: `/application`
-- Project dependencies: `requirements.txt`
-
-### Iris Example Project Dependencies
+### Project Dependencies
+- Python 3.7
 - FastAPI
 - pydantic
 - uvicorn[standard]
@@ -36,11 +33,14 @@ In the Elastic Beanstalk Console go to your environment -> Configuration. Then
 Software -> Edit. At the bottom of the page you can add a [key: value] pair for 
 each of the environment variables required for the app.
 
-### EB Initialize
+### EB - Initialize
 `eb init`
 
-### EB Deploy
+### EB - Deploy
 `eb create --region us-east-1 ds-fastapi-test`
 
-### EB Redeploy
+### EB - Redeploy
 `eb deploy ds-fastapi-test`
+
+### EB - Open App
+`eb open ds-fastapi-test`
