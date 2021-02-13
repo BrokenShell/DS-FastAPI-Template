@@ -6,18 +6,18 @@
 
 ### Project Structure
 - Project Directory
-    - `/application` - Python package
-        - `__init__.py` - `from application.main import application`
-        - `data.py` - Iris object model
-        - `main.py` - primary application routes and FastAPI app named `application`
-        - `model.joblib` - joblib or pickled model
-        - `predict.py` - predict route
+    - `/application` Python package directory
+        - `__init__.py`
+        - `data.py` Iris object model for pydantic
+        - `main.py` Primary application routes and FastAPI app named `application`
+        - `model.joblib` joblib or pickled model
+        - `predict.py` Prediction route
     - `.gitignore`
     - `.ebignore`
-    - `builder.py` - ML model builder script (external)
-    - `loader.py` - ML model loader script (external)
-    - `README.md` - This file
-    - `requirements.txt` - Dependencies
+    - `builder.py` ML model builder script (external)
+    - `loader.py` ML model loader script (external)
+    - `README.md` This file
+    - `requirements.txt` Dependencies
 
 ### Project Dependencies
 - Python 3.7
