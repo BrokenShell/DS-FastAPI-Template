@@ -13,6 +13,7 @@
         - `model.joblib` - joblib or pickled model
         - `predict.py` - predict route
     - `.gitignore`
+    - `.ebignore`
     - `builder.py` - ML model builder script (external)
     - `loader.py` - ML model loader script (external)
     - `README.md` - This file
