@@ -2,7 +2,8 @@
 ## Iris Example Project
 
 ### Deployment URLs
-- https://fastapi-template.herokuapp.com
+- Heroku: https://fastapi-template.herokuapp.com
+- AWS: https://fastapi-test.storysquad.dev/
 
 ### Project Structure
 - `/ds-fastapi-test/` Project Directory
@@ -19,9 +20,10 @@
     - `Procfile` Web app entrypoint
     - `README.md` This file
     - `requirements.txt` Dependencies
+    - `runtime.txt` Specifies Python version
 
 ### Project Dependencies
-- Python 3.7
+- Python 3.7.10
     - fastapi
     - pydantic
     - uvicorn[standard]
