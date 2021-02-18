@@ -1,8 +1,8 @@
 # DS FastAPI Template
 ## Iris Example Project
 
-### Deployment URL
-- https://fastapi-test.storysquad.dev
+### Deployment URLs
+- https://fastapi-template.herokuapp.com
 
 ### Project Structure
 - `/ds-fastapi-test/` Project Directory
