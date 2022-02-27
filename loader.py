@@ -1,13 +1,16 @@
 from joblib import load
+from pandas import DataFrame
 from sklearn import datasets
 
 
 model = load('application/model.joblib')
 X, y = datasets.load_iris(return_X_y=True)
-
-for i in range(len(X)):
-    row = X[i]
-    y_true = y[i]
-    y_pred, *_ = model.predict([row])
-    y_prob, *_ = model.predict_proba([row])
-    print(f'#{i} {list(row)}: {y_pred}/{y_true} @ {100 * y_prob[y_pred]:.2f}%')
+df = DataFrame(X, columns=[
+    "sepal_length",
+    "sepal_width",
+    "petal_length",
+    "petal_width",
+])
+predictions = zip(y, model.predict(df), model.predict_proba(df))
+print("pred/y_true: conf")
+print("\n".join(f"{pred}/{y_true}: {max(proba):.0%}" for y_true, pred, proba in predictions))

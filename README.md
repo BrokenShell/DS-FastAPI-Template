@@ -1,9 +1,8 @@
-# DS FastAPI Template
+# BloomTech Data Science FastAPI Template
 ## Iris Example Project
 
 ### Deployment URLs
 - Heroku: https://fastapi-template.herokuapp.com
-- AWS: https://fastapi-test.storysquad.dev/
 
 ### Project Structure
 - `/ds-fastapi-test/` Project Directory
@@ -11,7 +10,7 @@
         - `__init__.py`
         - `data.py` Iris object model for pydantic
         - `main.py` Primary application routes and FastAPI app named `application`
-        - `model.joblib` joblib or pickled model
+        - `model.joblib` serialized ML model
         - `predict.py` Prediction route
     - `.gitignore`
     - `.ebignore`
@@ -20,16 +19,19 @@
     - `Procfile` Web app entrypoint
     - `README.md` This file
     - `requirements.txt` Dependencies
-    - `runtime.txt` Specifies Python version
+    - `run_dev_srv.sh` Run script for developer mode
+    - `run_pro_srv.sh` Run script for production mode (matches Procfile)
+    - `runtime.txt` Specifies Python version (Heroku)
 
 ### Project Dependencies
-- Python 3.7.10
+- Python 3.7.x
     - fastapi
     - pydantic
-    - uvicorn[standard]
     - joblib
     - pandas
     - scikit-learn
+    - uvicorn[standard] (development server)
+    - gunicorn (production server)
 - awscli
 - eb
 
@@ -57,6 +59,29 @@ pip install -r requirements.txt
 ```shell
 uvicorn application:application
 ```
+
+### Run App in Developer Mode (Linux or Mac)
+```shell
+./run_dev_srv.sh
+```
+
+### Run App in Production Mode (Linux or Mac)
+```shell
+./run_prod_srv.sh
+```
+
+# Deployment Options
+
+## 1. Heroku Deployment
+- Push project to GitHub
+- Use Heroku's GitHub integration
+- Deploy App
+- Environment Variables
+  - In the Heroku Console go to your app `settings` tab
+  - Click `Reveal Config Vars` button
+  - Add a [key: value] pair for each environment variable
+
+## 2. AWS Elastic Beanstalk Deployment
 
 ### Elastic Beanstalk - Initialize
 ```shell

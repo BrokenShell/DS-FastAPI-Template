@@ -4,13 +4,11 @@ from application import predict
 
 
 application = FastAPI(
-    title='DS FastAPI Test',
+    title='DS FastAPI Template',
     description='This is just a test.',
-    version='0.1',
+    version='0.1.1',
     docs_url='/',
 )
-
-application.include_router(predict.router)
 
 application.add_middleware(
     CORSMiddleware,
@@ -19,3 +17,11 @@ application.add_middleware(
     allow_methods=['*'],
     allow_headers=['*'],
 )
+
+
+@application.get("/version")
+async def version():
+    return {"version": application.version}
+
+
+application.include_router(predict.router)
